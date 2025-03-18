@@ -1,6 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",  // Add this line to output static files
+  output: "export",
+  distDir: "build",
+  basePath: "",
+  assetPrefix: "./",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+    domains: [
+      'ext.same-assets.com', 
+      'web-assets.same.dev',
+      'ext.web-assets.same.dev',
+    ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'web-assets.same.dev'
+      }
+    ]
+  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -14,22 +32,7 @@ const nextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,  // Required for static export
-    domains: [
-      'ext.same-assets.com',
-      'web-assets.same.dev',
-      'ext.web-assets.same.dev',
-    ],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'web-assets.same.dev'
-      }
-    ]
-  },
-  distDir: "build",
+  }
 };
 
 module.exports = nextConfig;
