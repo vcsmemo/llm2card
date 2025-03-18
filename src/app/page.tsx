@@ -1,3 +1,21 @@
+'use client'
+
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
+import { injectFallbackStyles } from './fallback-styles'
+
+export default function Home() {
+  // 检测是否有JS支持
+  useEffect(() => {
+    // 注入备用样式，确保基本可用性
+    injectFallbackStyles();
+    
+    // 添加类表示JS已加载
+    document.body.classList.add('js-loaded');
+    document.body.classList.remove('no-js');
+  }, [])
+
+  // 其余代码保持不变...
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
