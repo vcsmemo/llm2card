@@ -6,7 +6,6 @@
     "dev": "next dev",
     "build": "next build && touch build/.nojekyll",
     "start": "serve build",
-  // 其余内容保持不变...
 }
   },
   "engines": {
