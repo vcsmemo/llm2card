@@ -1,26 +1,22 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
 import { useState, useEffect } from 'react'
 import { injectFallbackStyles } from './fallback-styles'
 
 export default function Home() {
-  // 检测是否有JS支持
+  // 检测是否有 JS 支持
   useEffect(() => {
     // 注入备用样式，确保基本可用性
     injectFallbackStyles();
     
-    // 添加类表示JS已加载
+    // 添加类表示 JS 已加载
     document.body.classList.add('js-loaded');
     document.body.classList.remove('no-js');
   }, [])
 
-  // 其余代码保持不变...
-import Link from "next/link";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-
-export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -38,7 +34,7 @@ export default function Home() {
             <div className="relative w-full max-w-md">
               <div className="relative p-4 rounded-lg border border-gray-200 bg-white shadow-sm">
                 <span className="inline-block px-3 py-1 bg-gray-100 text-sm rounded-full mb-2">Markdown</span>
-                <p className="text-sm text-gray-600 mb-2">将你的LLM生成内容转换为精美的知识卡片...</p>
+                <p className="text-sm text-gray-600 mb-2">将你的 LLM 生成内容转换为精美的知识卡片...</p>
               </div>
             </div>
           </div>
@@ -78,7 +74,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold mb-2">一键转换</h3>
               <p className="text-sm text-gray-600">
-                将LLM生成的Markdown内容快速转换为精美的知识卡片，让内容更有吸引力。
+                将 LLM 生成的 Markdown 内容快速转换为精美的知识卡片，让内容更有吸引力。
               </p>
             </div>
 
@@ -97,7 +93,7 @@ export default function Home() {
               </div>
               <h3 className="text-lg font-semibold mb-2">多种主题</h3>
               <p className="text-sm text-gray-600">
-                提供15+种精美主题，满足不同平台和内容风格的需求。
+                提供 15+ 种精美主题，满足不同平台和内容风格的需求。
               </p>
             </div>
 
@@ -150,7 +146,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl font-bold mb-4">1</div>
               <h3 className="text-lg font-semibold mb-2">输入 Markdown 内容</h3>
               <p className="text-sm text-gray-600">
-                在编辑器中直接输入或粘贴LLM生成的Markdown文本，支持标题、列表、图片等格式。
+                在编辑器中直接输入或粘贴 LLM 生成的 Markdown 文本，支持标题、列表、图片等格式。
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
@@ -164,7 +160,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center text-xl font-bold mb-4">3</div>
               <h3 className="text-lg font-semibold mb-2">一键导出使用</h3>
               <p className="text-sm text-gray-600">
-                预览效果满意后，一键导出为PNG或SVG格式图片，直接分享到社交媒体平台。
+                预览效果满意后，一键导出为 PNG 或 SVG 格式图片，直接分享到社交媒体平台。
               </p>
             </div>
           </div>
@@ -177,8 +173,8 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-center mb-12">关于 LLM2Card</h2>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-lg text-gray-700 mb-8">
-              LLM2Card 是一款专为内容创作者设计的工具，可以将大语言模型（LLM）生成的Markdown格式内容快速转换为精美的知识卡片。
-              无论是发布到小红书、公众号、知乎还是其他社交平台，LLM2Card都能帮助你打造专业、美观的内容排版。
+              LLM2Card 是一款专为内容创作者设计的工具，可以将大语言模型（LLM）生成的 Markdown 格式内容快速转换为精美的知识卡片。
+              无论是发布到小红书、公众号、知乎还是其他社交平台，LLM2Card 都能帮助你打造专业、美观的内容排版。
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-8 text-center">
               <div>
@@ -251,7 +247,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">立即开始使用 LLM2Card</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            将你的LLM生成内容转换为精美的知识卡片，让你的分享更专业、更有吸引力！
+            将你的 LLM 生成内容转换为精美的知识卡片，让你的分享更专业、更有吸引力！
           </p>
           <Link href="/editor">
             <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
