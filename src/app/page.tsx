@@ -5,6 +5,34 @@ import { Button } from '@/components/ui/button'
 import { useEffect } from 'react'
 import { injectFallbackStyles } from '@/lib/fallback-styles'
 
+// 添加类型声明
+declare global {
+  interface Document {
+    body: HTMLElement & {
+      classList: DOMTokenList;
+    }
+  }
+}
+
+// 添加 JSX 类型声明
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      div: React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+      section: React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+      h1: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+      h2: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+      h3: React.DetailedHTMLProps<React.HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
+      p: React.DetailedHTMLProps<React.HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
+      span: React.DetailedHTMLProps<React.HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+      svg: React.SVGProps<SVGSVGElement>;
+      path: React.SVGProps<SVGPathElement>;
+      rect: React.SVGProps<SVGRectElement>;
+      circle: React.SVGProps<SVGCircleElement>;
+    }
+  }
+}
+
 export default function Home() {
   // 检测是否有 JS 支持
   useEffect(() => {
