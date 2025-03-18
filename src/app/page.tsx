@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { injectFallbackStyles } from '@/lib/fallback-styles'
 
 export default function Home() {
