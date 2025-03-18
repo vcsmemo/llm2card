@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "node server.js",
-    "lint": "next lint"
+    "build": "next build && touch build/.nojekyll",
+    "start": "serve build",
   },
   "engines": {
     "node": "18.x"
